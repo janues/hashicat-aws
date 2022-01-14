@@ -14,8 +14,6 @@ provider "aws" {
 resource "aws_vpc" "hashicat" {
   cidr_block           = var.address_space
   enable_dns_hostnames = true
-  aws_instance         = "devops"
-  Billable             = "true"
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
